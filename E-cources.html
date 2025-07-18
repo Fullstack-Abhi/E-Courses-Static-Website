@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOURSES - Online Learning Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="E-cources.css">
+</head>
+<body>
+
+
+  <!-- Header Top Section -->
+  <div class="container-fluid header-top">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <!-- Brand -->
+      <div class="brand fw-bold fs-4 text-danger">
+        E<span>COURSES</span>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="d-flex flex-wrap align-items-center gap-4">
+        <div class="contact-block">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <div class="title">Our Office</div>
+            <div class="subtitle">Pune,India</div>
+          </div>
+        </div>
+
+        <div class="contact-block">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <div class="title">Email Us</div>
+            <div class="subtitle">patil@example.com</div>
+          </div>
+        </div>
+
+        <div class="contact-block">
+          <i class="fas fa-phone"></i>
+          <div>
+            <div class="title">Call Us</div>
+            <div class="subtitle">8975383935</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container ">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex justify-content-between" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="subjectsDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-book-open me-2"></i>Subjects
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="showSubjectCourses('Web Design')">Web Design</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="showSubjectCourses('Apps Design')">Apps Design</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="showSubjectCourses('Marketing')">Marketing</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="showSubjectCourses('Research')">Research</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="showSubjectCourses('SEO')">SEO</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home" onclick="showPage('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" onclick="showPage('about')">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses" onclick="showPage('courses')">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('teachers')">Teachers</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown">
+                            Blog
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#blog-section" onclick="showPage('blog')">Blog List</a></li>
+                            <li><a class="dropdown-item" href="#blog-section" onclick="showPage('blog-detail')">Blog Detail</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showPage('contact')">Contact</a>
+                    </li>
+                </ul>
+                
+            </div>
+            <button class="btn btn-primary ms-3 " onclick="showPage('signup')">Join Now</button>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page-section active">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="hero-content">
+                            <p class="hero-subtitle">BEST ONLINE COURSES</p>
+                            <h1 class="hero-title">New Way To Learn<br>From Home</h1>
+                            <button class="btn btn-primary btn-lg" onclick="showPage('courses')">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-image">
+                            <img src="https://cdn1.expresscomputer.in/wp-content/uploads/2023/12/10131318/EC-internet-ai-concept-generativeai-750.jpg" alt="Learning">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="section-subtitle">ABOUT US</div>
+                        <h2>Innovative Way To Learn</h2>
+                        <p>Aliquyam accusam clita nonumy ipsum sit sed clita ipsum clita, ipsum dolores amet voluptua duo dolores et sit ipsum rebum, sadipscing et erat eirmod diam kasd labore clita est. Diam sanctus gubergren sit rebum clita amet, sea est sea vero sed et. Sadipscing labore tempor at sit dolor clita consetetur diam. Diam ut diam tempor no et, lorem dolore invidunt no nonumy stet ea labore, dolor justo et sit gubergren diam sed sed no ipsum. Sit tempor ut nonumy elitr dolores justo aliquyam ipsum stet</p>
+                        <button class="btn btn-primary" onclick="showPage('about')">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subjects Section -->
+        <section class="subjects-section">
+            <div class="container">
+                <div class="section-title">
+                    <div class="section-subtitle">SUBJECTS</div>
+                    <h2>Explore Top Subjects</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="subject-card">
+                            <img src="https://res.cloudinary.com/jerrick/image/upload/v1747726799/682c31ce1f4663001daf962a.png" alt="Web Design">
+                            <div class="subject-card-body" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <h5>Web Design</h5>
+                                <div class="course-count">100 Courses</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="subject-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI7gGTc9r4DKuTeZ1LQvlGFX6AhJ7hlwWeR9eoducz01dHg1J4aGEdk-Rwfe2HtfVfuys&usqp=CAU" alt="Development">
+                            <div class="subject-card-body" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <h5>Development</h5>
+                                <div class="course-count">100 Courses</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="subject-card">
+                            <img src="https://d502jbuhuh9wk.cloudfront.net/articles/65d839dfe4b0dd859b4b9c24/UwRpAscreenshot20240223122308.png" alt="Game Design">
+                            <div class="subject-card-body" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                <h5>Game Design</h5>
+                                <div class="course-count">100 Courses</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="subject-card">
+                            <img src="https://media.licdn.com/dms/image/v2/D4E12AQHfbCbbqAaouA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1681218438453?e=2147483647&v=beta&t=gW5XdhZq3cEp7ngVXmjtHM2RZJKY1em-27cO6Z787dA" alt="Apps Design">
+                            <div class="subject-card-body" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                <h5>Apps Design</h5>
+                                <div class="course-count">100 Courses</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="subject-card">
+                            <img src="https://www.mygreatlearning.com/blog/wp-content/uploads/2021/10/iStock-815815658-1024x768.jpg" alt="Marketing">
+                            <div class="subject-card-body" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                                <h5>Marketing</h5>
+                                <div class="course-count">100 Courses</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="subject-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNHjU3IXR0oP6TaIiMf2TcMDbnMkAXFwADQw&s" alt="Research">
+                            <div class="subject-card-body" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                                <h5>Research</h5>
+                                <div class="course-count">100 Courses</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="subject-card">
+                            <img src="https://media.licdn.com/dms/image/v2/D5612AQHBLsrWmb2d3g/article-cover_image-shrink_600_2000/B56ZX2LUQUGsAQ-/0/1743591917166?e=2147483647&v=beta&t=U095qZRld6y0AgZYD3a0ruIH-_6QHwNfPSF4vjQHyeM" alt="Content Writing">
+                            <div class="subject-card-body" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                                <h5>Content Writing</h5>
+                                <div class="course-count">100 Courses</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="subject-card">
+                            <img src="https://f1studioz.com/blog/wp-content/uploads/2024/10/DALL%C2%B7E-2024-10-16-13.11.27-A-minimalist-futuristic-illustration-showing-a-developer-using-an-AI-powered-code-completion-tool.-The-scene-features-a-dark-grey-high-tech-workspac-1024x585.webp" alt="SEO">
+                            <div class="subject-card-body" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <h5>SEO</h5>
+                                <div class="course-count">100 Courses</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+ 
+    <!-- Popular Courses Section -->
+    <section id="courses" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <small>COURSES</small>
+                <h2>Our Popular Courses</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgoge0hKo8Q8TXz-ZzSB9e5gIuiV80wL0fZQ&s" alt="Web Design Course" class="course-image">
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="fas fa-users students-icon"></i> 25 Students</span>
+                                <span><i class="fas fa-clock time-icon"></i> 0h 30m</span>
+                            </div>
+                            <h5 class="course-title">Artificial Intelligence courses for beginner</h5>
+                            <div class="course-footer">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i> 4.5 (260)
+                                </div>
+                                <div class="price">30,000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <img src="https://media.licdn.com/dms/image/v2/D5612AQFm2oVuXv5UxA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1689605034627?e=2147483647&v=beta&t=hs6xvo8CqsQmFSd8OxFYgeatuY3D0vdxs0YOYI3TlBk" alt="" class="course-image">
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="fas fa-users students-icon"></i> 25 Students</span>
+                                <span><i class="fas fa-clock time-icon"></i> 0h 30m</span>
+                            </div>
+                            <h5 class="course-title">Java Devloper courses for beginner</h5>
+                            <div class="course-footer">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i> 4.5 (260)
+                                </div>
+                                <div class="price">30,000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <img src="https://miro.medium.com/v2/resize:fit:1400/0*Kou69LOoiWkrjTdz" alt="Web Design Course" class="course-image">
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="fas fa-users students-icon"></i> 25 Students</span>
+                                <span><i class="fas fa-clock time-icon"></i> 0h 30m</span>
+                            </div>
+                            <h5 class="course-title">Frontend Devloper courses for beginner</h5>
+                            <div class="course-footer">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i> 4.5 (260)
+                                </div>
+                                <div class="price">30,000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E12AQHo30vrSf46RA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1680682347306?e=2147483647&v=beta&t=kcfSPuBq3UQqA3gw8WVIB0RehT3-gQb5U00gHH36oAs" alt="Web Design Course" class="course-image">
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="fas fa-users students-icon"></i> 25 Students</span>
+                                <span><i class="fas fa-clock time-icon"></i> 0h 30m</span>
+                            </div>
+                            <h5 class="course-title">Backend Devloper courses for beginner</h5>
+                            <div class="course-footer">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i> 4.5 (260)
+                                </div>
+                                <div class="price">30,000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjxounG9ORzYHqCA1dcSM6ldQrFep160IiHQ&s" alt="Web Design Course" class="course-image">
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="fas fa-users students-icon"></i> 25 Students</span>
+                                <span><i class="fas fa-clock time-icon"></i> 0h 30m</span>
+                            </div>
+                            <h5 class="course-title">Database Devloper courses for beginner</h5>
+                            <div class="course-footer">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i> 4.5 (260)
+                                </div>
+                                <div class="price">30,000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSLgramR3jI5bN9KcGgwlIjN4hpmL4gQO89A&s" alt="Web Design Course" class="course-image">
+                        <div class="course-content">
+                            <div class="course-meta">
+                                <span><i class="fas fa-users students-icon"></i> 25 Students</span>
+                                <span><i class="fas fa-clock time-icon"></i> 0h 30m</span>
+                            </div>
+                            <h5 class="course-title">Python Devloper courses for beginner</h5>
+                            <div class="course-footer">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i> 4.5 (260)
+                                </div>
+                                <div class="price">30,000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section class="promo-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="promo-content">
+                        <small style="color: #ff6b35; font-size: 14px; font-weight: 600; letter-spacing: 2px;">NEED ANY COURSES</small>
+                        <h3>30% Off For New Students</h3>
+                        <p>Vivamus lorem justo sanctus elit. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ut justo. Erat justo sed sed diam. Et at erat sed eos ipsum et dolor.</p>
+                        <ul class="promo-list">
+                            <li><i class="fas fa-check"></i> Labore eos amet dolor amet diam</li>
+                            <li><i class="fas fa-check"></i> Etsea et sit dolor amet ipsum</li>
+                            <li><i class="fas fa-check"></i> Diam dolor diam elitr ipsum vero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="signup-form">
+                        <h4>Sign Up Now</h4>
+                        <form>
+                            <input type="text" class="form-control" placeholder="Your name" required>
+                            <input type="email" class="form-control" placeholder="Your email" required>
+                            <select class="form-control" required>
+                                <option value="">Select a course</option>
+                                <option value="web-design">Web Design & Development</option>
+                                <option value="programming">Programming Fundamentals</option>
+                                <option value="ui-ux">UI/UX Design</option>
+                            </select>
+                            <button type="submit" class="btn btn-signup">Sign Up Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <small>TEACHERS</small>
+                <h2>Meet Our Teachers</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="teacher-card">
+                        <img src="https://as2.ftcdn.net/jpg/05/79/83/69/1000_F_579836914_yo2WTNUIDANJPGGvhXSGMRc6bfCmUGM7.jpg" alt="Teacher" class="teacher-image">
+                        <h5 class="teacher-name">Abhijeet Patil</h5>
+                        <p class="teacher-role">App Designer</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="teacher-card">
+                        <img src="https://as2.ftcdn.net/jpg/05/79/83/69/1000_F_579836914_yo2WTNUIDANJPGGvhXSGMRc6bfCmUGM7.jpg" alt="Teacher" class="teacher-image">
+                        <h5 class="teacher-name">Krushna Biradar</h5>
+                        <p class="teacher-role">Web Designer</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="teacher-card">
+                        <img src="https://r2.erweima.ai/imgcompressed/compressed_062bf85cb31111e7eb885cf5ef59751a.webp" alt="Teacher" class="teacher-image">
+                        <h5 class="teacher-name">Ishwari Sonavne</h5>
+                        <p class="teacher-role">Research</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="teacher-card">
+                        <img src="https://r2.erweima.ai/imgcompressed/compressed_062bf85cb31111e7eb885cf5ef59751a.webp" alt="Teacher" class="teacher-image">
+                        <h5 class="teacher-name">Swapna Mam</h5>
+                        <p class="teacher-role">Marketing</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+    <h5>Testimonial</h5>
+    <h2>What Say Our Students</h2>
+
+    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+
+    <p class="testimonial-text" id="testimonialText">
+      Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. <br/>
+      Rebum elitr dolore et eos labore, stet justo sed est sed. Diam <br/>
+      sed sed dolor stet amet eirmod eos labore diam
+    </p>
+
+    <div class="client-info">
+      <img src="https://as2.ftcdn.net/jpg/05/79/83/69/1000_F_579836914_yo2WTNUIDANJPGGvhXSGMRc6bfCmUGM7.jpg" alt="Client" class="client-img" id="clientImg">
+      <h5 class="client-name" id="clientName">Abhijeet Patil</h5>
+      <p class="client-profession" id="clientProfession">Java Full Stack Devloper</p>
+    </div>
+
+    <div class="dots mt-4">
+      <span class="active" onclick="changeTestimonial(0)"></span>
+      <span onclick="changeTestimonial(1)"></span>
+      <span onclick="changeTestimonial(2)"></span>
+    </div>
+  </section>
+
+  <script>
+    const testimonials = [
+      {
+        text: `Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. 
+              Rebum elitr dolore et eos labore, stet justo sed est sed. 
+              Diam sed sed dolor stet amet eirmod eos labore diam`,
+        img: "https://as2.ftcdn.net/jpg/05/79/83/69/1000_F_579836914_yo2WTNUIDANJPGGvhXSGMRc6bfCmUGM7.jpg",
+        name: "Abhijeet Patil",
+        profession: "Java Full Stack Devloper"
+      },
+      {
+        text: `Excellent learning platform. The instructors are top-notch and 
+              materials are well-organized.`,
+        img: "https://as2.ftcdn.net/jpg/05/79/83/69/1000_F_579836914_yo2WTNUIDANJPGGvhXSGMRc6bfCmUGM7.jpg",
+        name: "Abhijeet Patil",
+        profession: "Web Developer"
+      },
+      {
+        text: `One of the best decisions I've made for my career. Highly recommended!`,
+        img: "https://as2.ftcdn.net/jpg/05/79/83/69/1000_F_579836914_yo2WTNUIDANJPGGvhXSGMRc6bfCmUGM7.jpg",
+        name: "Abhijeet Patil",
+        profession: "Digital Marketer"
+      }
+    ];
+
+    function changeTestimonial(index) {
+      document.getElementById('testimonialText').innerHTML = testimonials[index].text;
+      document.getElementById('clientImg').src = testimonials[index].img;
+      document.getElementById('clientName').textContent = testimonials[index].name;
+      document.getElementById('clientProfession').textContent = testimonials[index].profession;
+
+      const dots = document.querySelectorAll('.dots span');
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+  </script>
+
+    <!-- Blog Section -->
+    <section id="blog-section" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <small>OUR BLOG</small>
+                <h2>Latest From Our Blog</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://erepublic.brightspotcdn.com/dims4/default/4178cec/2147483647/strip/true/crop/6631x3458+0+690/resize/1680x876!/format/webp/quality/90/?url=http%3A%2F%2Ferepublic-brightspot.s3.us-west-2.amazonaws.com%2F76%2Fdf%2Ff7e54f324fd7948193911444731f%2Fhttps-download.shutterstock.com%2Fgatekeeper%2FW3siZCI6ICJzaHV0dGVyc3RvY2stbWVkaWEiLCAiayI6ICJwaG90by82MTEyNTM2OTgvaHVnZS5qcGciLCAiZGMiOiAiaWRsXzEyMyIsICJlIjogMTY0ODcwNTk5NSwgIm0iOiAxfSwgIlVkRW5LU2JMSGpTQTlwdVo5b0MxYmh2NDhiYyJd%2Fshutterstock_611253698.jpg" alt="Blog Post" class="blog-img">
+                        </div>
+                        <div class="blog-content">
+                            <h5 class="blog-title">Lorem elitr magna stet eirmod labore amet labore clita ut ut clita</h5>
+                            <p class="blog-date">Jan 01, 2050</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://www.shutterstock.com/image-photo/technological-learning-that-uses-educational-600nw-2578779671.jpg" alt="Blog Post" class="blog-img">
+                        </div>
+                        <div class="blog-content">
+                            <h5 class="blog-title">Lorem elitr magna stet eirmod labore amet labore clita ut ut clita</h5>
+                            <p class="blog-date">Jan 01, 2050</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://sklc-tinymce-2021.s3.amazonaws.com/comp/2023/04/Robotics%20and%20Automation_1680531949.png" alt="Blog Post" class="blog-img">
+                        </div>
+                        <div class="blog-content">
+                            <h5 class="blog-title">Lorem elitr magna stet eirmod labore amet labore clita ut ut clita</h5>
+                            <p class="blog-date">Jan 01, 2050</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">GET IN TOUCH</h5>
+                        <div class="footer-contact">
+                            <p><i class="fas fa-map-marker-alt"></i>Pune,India</p>
+                            <p><i class="fas fa-phone"></i>8975383935</p>
+                            <p><i class="fas fa-envelope"></i> patilabhijeet@example.com</p>
+                        </div>
+                        <div class="footer-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">OUR COURSES</h5>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Web Design</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Apps Design</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Marketing</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Research</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> SEO</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">NEWSLETTER</h5>
+                        <p class="footer-text">Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed duo duo ipsum. Dolor duo eirmod sea justo no lorem est diam</p>
+                        <div class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" class="newsletter-input" placeholder="Your Email Address">
+                                <button class="btn newsletter-btn" type="button">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">© Abhijeet Patil</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-bottom-links">
+                            <a href="#">Privacy</a>
+                            <a href="#">Terms</a>
+                            <a href="#">FAQs</a>
+                            <a href="#">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for back to top
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show/hide back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for signing up! We will contact you soon.');
+            this.reset();
+        });
+
+        // Testimonial dots functionality
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Newsletter form
+        document.querySelector('.newsletter-btn').addEventListener('click', function() {
+            const email = document.querySelector('.newsletter-input').value;
+            if (email) {
+                alert('Thank you for subscribing to our newsletter!');
+                document.querySelector('.newsletter-input').value = '';
+            } else {
+                alert('Please enter your email address.');
+            }
+        });
+
+        // Blog card hover effects
+        document.querySelectorAll('.blog-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+
+        function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+}
+    </script>
+</body>
+</html>
